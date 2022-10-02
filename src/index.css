@@ -1,10 +1,35 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+   /*font weight*/
+   --font-weight-regular: 400;
+   /* --font-weight-medium: 400; */
+ 
+   /*colors*/
+  --primary: #5d8cd1;
+  --blue-dark: #1E90FF;
+  --white: #FFF;
+  --grey: #646368;
+  --gray-light: #f3f5f9;
 }
 
+* {
+  margin:  0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 body {
-  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 1280px;
   min-height: 100vh;
+  color: var(--grey);
 }

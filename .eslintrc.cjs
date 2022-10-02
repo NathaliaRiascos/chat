@@ -23,6 +23,7 @@ module.exports = {
     semi: 'never',
     'react/react-in-jsx-scope': 0,
     '@typescript-eslint/semi': 'never',
+    'linebreak-style': ['error', 'unix']
     'comma-dangle': 'never',
     '@typescript-eslint/comma-dangle': 'never'
   }
