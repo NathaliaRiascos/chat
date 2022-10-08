@@ -1,22 +1,32 @@
-import { Login,Register } from '@/pages'
+import { Login,Register, Home } from '@/pages'
+import { ProtectedRoute, SpecialRoute } from '.'
+
 import {
   createBrowserRouter
 } from 'react-router-dom'
 
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Hello</h1>,
-  },
-  {
-    path: '/login',
-    element: <Login />,
+    element: <SpecialRoute>
+      <Login />
+    </SpecialRoute> 
   },
   {
     path: '/register',
-    element: <Register />,
+    element: <SpecialRoute>
+      <Register />
+    </SpecialRoute>
+  },
+  {
+    path: '/home',
+    element: <ProtectedRoute><Home /></ProtectedRoute>
+  },
+  {
+    path: '*',
+    element: <p>There's nothing here: 404!</p>,
   }
 ])
-
 
 export default router
