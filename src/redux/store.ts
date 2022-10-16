@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { authSlice } from './features'
+import { authSlice, chatSlice } from './features'
 
 export interface AppStore {
 }
@@ -7,7 +7,8 @@ export interface AppStore {
 
 const store= configureStore<AppStore>({
   reducer: {
-    auth: authSlice.reducer
+    auth: authSlice.reducer,
+    chat: chatSlice.reducer
   }
 })
 

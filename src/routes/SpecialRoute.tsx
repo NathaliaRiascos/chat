@@ -5,5 +5,5 @@ export const SpecialRoute = ({ children }) => {
   const auth = loadState('user')
   return  !auth
     ? children
-    : <Navigate to='/home' />
+    : <Navigate to='/chat' />
 }

@@ -1,4 +1,12 @@
-import { Login,Register, Home } from '@/pages'
+import {
+  Login,
+  Register,
+  Root,
+  Messages,
+  Notifications,
+  Users,
+  Tool
+} from '@/pages'
 import { ProtectedRoute, SpecialRoute } from '.'
 
 import {
@@ -11,7 +19,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <SpecialRoute>
       <Login />
-    </SpecialRoute> 
+    </SpecialRoute>
   },
   {
     path: '/register',
@@ -20,8 +28,27 @@ const router = createBrowserRouter([
     </SpecialRoute>
   },
   {
-    path: '/home',
-    element: <ProtectedRoute><Home /></ProtectedRoute>
+    path: '/chat',
+    element: <ProtectedRoute><Root /></ProtectedRoute>,
+    children: [
+      {
+        path: '',
+        element: <Messages />
+      },
+      {
+        path: 'notifications',
+        element: <Notifications />
+      },
+      {
+        path: 'users',
+        element: <Users />
+      },
+      { 
+        path: 'tool',
+        element: <Tool />
+      }
+    ]
+
   },
   {
     path: '*',

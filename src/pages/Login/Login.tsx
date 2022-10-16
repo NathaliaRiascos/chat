@@ -25,7 +25,7 @@ function Login(): JSX.Element {
 
   const signIn = (user: User) => {
     dispatch(signInUser(user))
-    navigate('/home')
+    navigate('/chat')
   }
 
   const { email, password, handleChange, handleSubmit } = useForm<User>({

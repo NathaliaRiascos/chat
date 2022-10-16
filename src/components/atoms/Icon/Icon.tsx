@@ -9,7 +9,6 @@ interface Props {
   styleIcon?: string
 }
 function IconComponent ({ iconName, styleIcon, color }: Props) {
-
   return (
     <Icon className={styleIcon} color={color}>
       <FontAwesomeIcon icon={['fas', iconName]}/>
