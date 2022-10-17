@@ -7,11 +7,15 @@ export const LayoutContent = styled.div`
   margin: 20px;
   flex-direction: column;
   padding-top: 34px;
+  grid-column: 1 / 2;
+  overflow-y: auto;
+
  
   & header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 430px;
   }
   & header .title {
     font-weight: 600;
@@ -19,8 +23,36 @@ export const LayoutContent = styled.div`
     line-height: 25px
   }
 
-  @media screen and (${device.desktop}){
+  & header .btn--text {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: var(--primary);
+    cursor: pointer;
+  }
+
+  & .list--cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (min-width: 375px){
+    overflow-y: auto;
     padding-top: 50px;
     width: 100%;
+    
+    overflow-y: auto;
+    padding-right: 30px;
+
+}
+
+  @media screen and (${device.desktop}){
+   margin: 0;
+   grid-column: 2 / 3;
+
+   & header {
+    max-width: 400px;
+  }
   }
 `

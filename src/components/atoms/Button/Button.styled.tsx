@@ -5,7 +5,7 @@ const handleColorType = (color: string )=> {
   switch (color) {     
     case "white":
       return "var(--white)";
-    case "blue":
+    case "primary":
       return "var(--primary)";
     default:
       return color;
@@ -61,6 +61,13 @@ export const Button = styled.button`
     flex-direction: row reverse;
   }
 
+  &.small {
+    width: 45%;
+  }
+
+  &.large {
+    width: 100%;
+  }
   @media (min-width: 800px) {
     header &.link {
       color: var(--white);

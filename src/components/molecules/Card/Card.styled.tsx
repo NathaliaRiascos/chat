@@ -3,10 +3,15 @@ import { device } from '@/helpers/breakpoints'
 
 export const CardStyled = styled.div`
   background-color: var(--white);
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
   width: 100%;
   cursor: pointer;
+  max-width: 430px;
+
+  @media screen and (${device.desktop}){
+    max-width: 400px;
+  }
 `
 
 export const Body = styled.div`
@@ -22,14 +27,21 @@ export const Body = styled.div`
   }
 
   & .card__paragraph {
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-    // overflow: hidden;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
 
 `
 
 export const Footer = styled.div`
-
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 10px 0;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  border-top: 1.1px solid var(--light-grey);
 `
