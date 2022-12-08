@@ -25,7 +25,7 @@ function Anothers() {
       </header>
       <section className='list--cards'>
       { 
-        newData.map(ele => <Card data={ele} />)
+        newData.map((ele, index) => <Card key={index} data={ele} />)
       }
       </section>
     </>

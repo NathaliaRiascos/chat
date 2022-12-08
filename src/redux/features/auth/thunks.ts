@@ -71,7 +71,7 @@ export const signInUser = createAsyncThunk('user/signIn', async (usertoCreate: U
     // ADD TO LOCALSTORAGE
     const loggedUser = {
       username: user.displayName,
-      profileUser: '', 
+      photoURL: '', 
       email: user.email,
       id: user.uid
     }

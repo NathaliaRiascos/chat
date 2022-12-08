@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const Tabs = styled.div`
   background-color: var(--white);
   align-self: center;
-  height: 70.16px;
+  height: 50px;
   width: 100%;
-  max-width: 450px;
+  max-width: 430px;
   padding: 10px;
   border-radius: 20px;
 `
@@ -24,14 +24,4 @@ export const Tab = styled.button`
     background: #FAF6FD;
     font-weight: 500;
   }
-`
-
-export const ContainerIcon = styled.button`
-  width: 40px;
-  height: 36px;
-  border: none;
-  outline: transparent;
-  background: var(--primary);
-  cursor: pointer;
-  border-radius: 10px;
 `

@@ -15,7 +15,8 @@ export const CardStyled = styled.div`
 `
 
 export const Body = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 45px 1fr 45px;
   align-items: center;
   gap: 20px;
 
@@ -32,10 +33,14 @@ export const Body = styled.div`
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
-
-
 `
 
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+`
 export const Footer = styled.div`
   display: flex;
   justify-content: space-between;

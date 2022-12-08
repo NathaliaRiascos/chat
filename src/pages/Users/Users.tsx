@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import { Card, Search, Icon } from '@/components'
+import { Card, Search, Icon,Header } from '@/components'
 import { ListUser, Friends } from './components'
 
-import { Tabs, Tab as TabStyled, ContainerIcon } from './Users.styled'
+import { Tabs, Tab as TabStyled } from './Users.styled'
+import { getFriends } from '@/redux/features'
+import { useAppDispatch } from '@/redux/hooks';
 
 enum Tab {
   friends,
@@ -12,21 +14,22 @@ enum Tab {
 
 function Users() {
   const [toggle, setToggle] = useState(Tab.friends)
+  const dispatch = useAppDispatch()
 
+  useEffect(() => {
+   dispatch(getFriends())
+  }, [])
+  
   return (
     <>
-      <header>
-        <h1 className='title'>
-          { 
-            toggle === Tab.friends
+      <Header title={ 
+        toggle === Tab.friends
             ? 'Friends'
             : 'Users'
           }
-        </h1>
-        <ContainerIcon>
+        >
           <Icon iconName='user-plus' color='white'/>
-        </ContainerIcon>
-      </header>
+      </Header>
 
       <Search text={`Search ${toggle === Tab.friends? 'your friends': 'users'}`}/>
 

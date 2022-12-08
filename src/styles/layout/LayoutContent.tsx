@@ -9,6 +9,7 @@ export const LayoutContent = styled.div`
   padding-top: 34px;
   grid-column: 1 / 2;
   overflow-y: auto;
+  max-width: 430px;
 
  
   & header {
@@ -37,17 +38,22 @@ export const LayoutContent = styled.div`
     gap: 20px;
   }
 
-  @media (min-width: 375px){
-    overflow-y: auto;
-    padding-top: 50px;
-    width: 100%;
+//   @media (min-width: 375px){
+//     overflow-y: auto;
+//     padding-top: 50px;
+//     width: 100%;
     
-    overflow-y: auto;
-    padding-right: 30px;
+//     overflow-y: auto;
+//     padding-right: 30px;
 
-}
+// }
 
+
+  // @media screen and (${device.tablet}){
+  //   padding: 30px;
+  // }
   @media screen and (${device.desktop}){
+  padding-right: 30px;
    margin: 0;
    grid-column: 2 / 3;
 

@@ -7,6 +7,7 @@ export const LayoutAuth = styled.div`
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+  background-color: var(--white);
   
 
   & img {

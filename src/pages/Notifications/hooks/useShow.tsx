@@ -12,7 +12,7 @@ export const useShow = (initialState: number, data: []) => {
       hideAll(!showAll)
     }
 
-    const newData =  data.slice(0, visible)
+    const newData =  data?.slice(0, visible)
 
   return {
     newData,

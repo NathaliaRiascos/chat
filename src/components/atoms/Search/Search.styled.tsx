@@ -13,6 +13,6 @@ export const Input = styled.input`
   padding: 20px;
   border: none;
   border-radius: 10px;
-  max-width: 450px;
+  max-width: 430px;
 
 `

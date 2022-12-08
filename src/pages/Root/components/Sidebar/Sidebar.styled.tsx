@@ -87,7 +87,7 @@ export const Aside = styled.aside`
     list-style: none;
     justify-self: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 430px;
 
 
   & .bar {
@@ -108,6 +108,9 @@ export const Aside = styled.aside`
     display: none;
   }
 
+  @media screen and (${device.tablet}){
+    grid-column: span 2;
+  }
 
   @media screen and (${device.desktop}){
     display: grid;

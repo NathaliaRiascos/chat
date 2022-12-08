@@ -9,8 +9,12 @@ export const Main = styled.main`
   grid-template-columns: repeat(2, 100vw);
   scroll-behavior: smooth;
 
-  @media screen and (${device.desktop}){
-    grid-template-columns: repeat(5, 1fr);
-    width: 100vw;
-  }
+  @media screen and (${device.tablet}){
+      grid-template-columns: repeat(5, 1fr);
+      width: 100vw;
+    }
+  // @media screen and (${device.desktop}){
+  //   grid-template-columns: repeat(5, 1fr);
+  //   width: 100vw;
+  // }
 `

@@ -15,13 +15,16 @@ import { User } from '@/models'
 
 import { useAppDispatch } from '@/redux/hooks'
 import { singUpUser } from '@/redux/features/'
+import { useNavigate } from 'react-router-dom';
 
 
 function Register(): JSX.Element {
   const dispatch = useAppDispatch()
+  const navigate = useNavigate();
   
   const signUp = (user: User) => {
     dispatch(singUpUser(user))
+    navigate('/')
   }
   const { username, email, password, handleChange, handleSubmit } = useForm<User>({
     username: '',
