@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 
 export const Input = styled.input`
-  background: var(--light-grey);
+  background-color: var(--light-grey);
   border-radius: 15px;
   border: none;
   padding: 10px 20px;
   width: 100%;
-  height: 48px;
+  height: 44px;
   max-height: 70px;
   font-size: inherit;
+
+  &::placeholder {
+    color: var(--primary);
+  }
 `

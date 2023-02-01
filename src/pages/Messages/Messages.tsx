@@ -1,21 +1,19 @@
-import { useAppDispatch } from '@/redux/hooks'
-import { setChat } from '@/redux/features/'
-import { Card, Search, Header, Icon } from '@/components'
+import { Search, Header } from '@/components';
+import { Channels, DirectMessages } from './components'
 
 
 function Messages() {
-  const dispatch = useAppDispatch()
   return (
     <>
       <div>  
-        <Header title='Messages'
-        >
-          <Icon iconName='message' color='white'/>
-      </Header>
-        <button onClick={() => dispatch(setChat(1))}>Holi</button>
+        <Header title='Messages' />
       </div>
       <Search />
-      <Card />
+
+      <Channels />
+      <DirectMessages />
+
+      
     </>
   )
 }

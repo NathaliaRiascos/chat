@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Navbar } from '../../components'
-import { Avatar, Icon} from '@/components'
+import { Navbar, Avatar, Icon} from '@/components'
 
 import user from '@/assets/user.png'
 
@@ -22,9 +21,9 @@ function Sidebar() {
           <Icon iconName={`${isOpen? 'arrow-right':'arrow-left'}`}/>
         </button>
       </div>
-      <LayoutContent>
+      {/* <LayoutContent>
         <Outlet /> 
-      </LayoutContent>
+      </LayoutContent> */}
     </Aside>
   )
 }

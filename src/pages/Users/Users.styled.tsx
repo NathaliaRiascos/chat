@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Tabs = styled.div`
   background-color: var(--white);
+  // background-color: #ebf1f7;
   align-self: center;
-  height: 50px;
+  height: 58px;
   width: 100%;
   max-width: 430px;
   padding: 10px;
@@ -21,7 +22,8 @@ export const Tab = styled.button`
   cursor: pointer;
 
   &.tab__active {
-    background: #FAF6FD;
+    background: var(--light-grey);
+    color:  var(--primary);
     font-weight: 500;
   }
 `

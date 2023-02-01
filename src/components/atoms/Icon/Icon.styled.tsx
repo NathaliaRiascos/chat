@@ -1,26 +1,11 @@
-import styled from 'styled-components'
+import { handleColorType } from '@/helpers/colors'
+import { handleFontSize } from '@/helpers/sizes'
 
-const handleColorType = (color: string )=> {
-  switch (color) {     
-    case 'white':
-      return 'var(--white)';
-    case 'grey':
-      return 'var(--grey)';
-    case 'primary':
-      return 'var(--primary)';
-    case 'light-grey':
-      return 'var(--light-grey)';
-    case 'dark-white':
-      return 'var(--dark-white)';
-    case 'medium-grey':
-      return 'var(--medium-grey)';
-    default:
-      return color;
-  }
-}
+import styled from 'styled-components'
 
 export const Icon = styled.div`
   color: ${({ color }) => color? handleColorType(color): 'inherit'};
+  font-size: ${({ size }) => size? handleFontSize(size): 'inherit'};
 
   &.outline {
     background-color: transparent;

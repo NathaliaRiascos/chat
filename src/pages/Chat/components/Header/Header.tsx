@@ -1,20 +1,24 @@
 import { useNavigate } from 'react-router-dom'
-import { HeaderStyled } from './Header.styled'
-import { Avatar } from '@/components'
+import { HeaderStyled, UserInfo } from './Header.styled'
+import { Avatar, Card } from '@/components';
 
 import user from '@/assets/user.png'
+import { useAppDispatch } from '@/redux/hooks';
+import { setOpen } from '@/redux/features';
 
-function Header(imgURL: string) {
+
+function Header({ data} : any) {
+  const dispatch = useAppDispatch()
+
   return (
     <HeaderStyled>
-    
-    <div>
-     <Avatar src={user} alt='imagen de usuario' />
-     <div>
-      <h1>username</h1>
-      <span>online</span>
-     </div>
-    </div>
+      <button className='btnBack' onClick={() => dispatch(setOpen(false))}>Go Back One</button>
+      <UserInfo>
+        <Avatar src={data?.photo} alt=''/>
+        <h2>{data?.name}</h2>
+      </UserInfo>
+     
+     <button>Call</button>
     </HeaderStyled>
   )
 }

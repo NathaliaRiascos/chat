@@ -1,0 +1,1 @@
+export type FontSize = 'xs' | 'sm' | 'base' | 'lg' | '2lg'

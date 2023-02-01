@@ -1,20 +1,22 @@
-import { Icon } from 'components/atoms'
+import { Icon, IconButton } from '@/components'
+import { FontSize } from '@/models'
 import React from 'react'
-import { ContainerIcon } from './Header.styled'
+import { ContainerIcon, Title } from './Header.styled'
+import {  } from '../IconButton'
 
 interface Props {
   title: string
+  fontSize?: FontSize
+  onClick: ((ele?: any) => void)
   children: JSX.Element | JSX.Element[]
 }
-function Header({title, children}: Props) {
+function Header({title, onClick, fontSize = 'base', children}: Props) {
   return (
     <header>
-      <h1 className='title'>
+      <Title fontSize={fontSize}>
         { title }
-      </h1>
-      <ContainerIcon>
+      </Title>
         { children }
-      </ContainerIcon>
     </header>
   )
 }

@@ -4,13 +4,13 @@ import { User } from '@/models'
 
 
 interface AuthState { 
-  chatId: number
+  chatSelected: { photoURL: string, name: string, id:string} | null,
   open: boolean
   status: 'idle' | 'pending' | 'succeeded' | 'failed'
 }
 
 const initialState: AuthState = {
-  chatId: 0,
+  chatSelected: null,
   open: false,
   status: 'idle'
 }
@@ -20,7 +20,11 @@ export const chatSlice = createSlice({
   initialState,
   reducers: {
     setChat: (state, action ) => {
-      state.chatId = action.payload
+      
+      const { photoURL, name, id } = action.payload
+      console.log(action.payload,  photoURL, name, id)
+      state.chatSelected = {photoURL, name, id}
+      
       state.open = true
     },
     setOpen: (state, action ) => {

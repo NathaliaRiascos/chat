@@ -1,35 +1,52 @@
 import React from 'react'
 import { Button, Icon } from '@/components'
 import { IconName } from '@fortawesome/fontawesome-svg-core'
+import { FontSize } from '@/models';
 
 type typeBoton = 'button' | 'submit'
 type sizeBoton = 'small' | 'large'
-type styleElement = 'outline' | 'link' | 'primary'
+type styleElement = 'full' | 'outline' | 'link' | 'primary'
 type itemsPositionBoton = 'left' | 'right'
 
 interface Props {
   type: typeBoton
   icon: IconName
   size?: sizeBoton
+  sizeIcon?: FontSize
   styleButton?: styleElement
   styleIcon?: styleElement
-  color?: string
+  colorBtn?: string
+  colorIcon?: string
+  onClick?: () => void
   itemsPosition?: itemsPositionBoton
-  children: JSX.Element | JSX.Element[]
+  children?: JSX.Element | JSX.Element[]
 }
 
-function IconButton ({ type, styleButton, size, color, icon, styleIcon, itemsPosition , children }: Props): JSX.Element {
+function IconButton({ 
+  type, 
+  styleButton,
+  onClick, size,
+  sizeIcon,
+  colorIcon,
+  colorBtn,
+  icon,
+  styleIcon,
+  itemsPosition,
+  children 
+}: Props): JSX.Element {
+  
   return (
-      <Button
+    <Button
       type={type}
       style={styleButton}
-      color={color}
+      color={colorBtn}
       size={size}
+      onClick={onClick}
       itemsPosition={itemsPosition}
     >
-      <Icon styleIcon={styleIcon} color={color} iconName={icon} />
-      { children }
-    </Button> 
+      <Icon styleIcon={styleIcon} size={sizeIcon} color={colorIcon} iconName={icon} />
+      {children}
+    </Button>
   )
 }
 

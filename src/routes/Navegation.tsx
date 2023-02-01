@@ -48,7 +48,6 @@ const router = createBrowserRouter([
         element: <Tool />
       }
     ]
-
   },
   {
     path: '*',

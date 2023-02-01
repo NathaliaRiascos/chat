@@ -17,6 +17,7 @@ export const CardStyled = styled.div`
 export const Body = styled.div`
   display: grid;
   grid-template-columns: 45px 1fr 45px;
+  // display: flex;
   align-items: center;
   gap: 20px;
 
@@ -35,10 +36,18 @@ export const Body = styled.div`
   }
 `
 
+export const Title = styled.h1`
+  font-size: var(--text-lg);
+  
+  &:first-letter {
+    text-transform: uppercase;
+}
+`
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  // gap: 10px;
   justify-content: center;
 `
 export const Footer = styled.div`
@@ -49,4 +58,8 @@ export const Footer = styled.div`
   padding-top: 15px;
   flex-wrap: wrap;
   border-top: 1.1px solid var(--light-grey);
+`
+
+export const Aside = styled.div`
+  justify-self: center;
 `

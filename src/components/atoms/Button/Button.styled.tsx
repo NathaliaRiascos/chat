@@ -1,19 +1,7 @@
+import { handleColorType } from '@/helpers/colors'
 import styled from 'styled-components'
 
-
-const handleColorType = (color: string )=> {
-  switch (color) {     
-    case "white":
-      return "var(--white)";
-    case "primary":
-      return "var(--primary)";
-    default:
-      return color;
-  }
-}
-
 export const Button = styled.button`
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +28,16 @@ export const Button = styled.button`
     &:hover {
       background-color: var(--blue-dark);
     }
+  }
+
+  &.full {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: transparent;
+    background: var(--primary);
+    cursor: pointer;
+    border-radius: 10px;
   }
 
   &.outline {

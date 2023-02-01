@@ -1,2 +1,2 @@
-export * from './Friends'
 export * from './ListUser'
+export * from './AddFriend'

@@ -1,10 +1,13 @@
 import { Input, Form } from './Search.styled'
 
-
-function Search({ text }: {text: string}) {
+interface Props {
+  text: string,
+  color?: string
+}
+function Search({ text, color = 'white' }: Props) {
   return (
     <Form>
-      <Input placeholder={text? text: 'Search...'}/>
+      <Input color={color} placeholder={text? text: 'Search...'}/>
     </Form>
   )
 }

@@ -1,5 +1,10 @@
-export { Form } from './Form'
-export { IconButton } from './IconButton'
-export { HeaderForm } from './HeaderForm'
-export { Header } from './Header'
-export { Card } from './Card'
+export * from './Card';
+export * from './Form';
+export * from './Friends';
+export * from './Header';
+export * from './HeaderForm';
+export * from './IconButton';
+export * from './Modal';
+export * from './Navbar';
+export * from './Sidebar';
+

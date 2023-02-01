@@ -108,14 +108,11 @@ export const Aside = styled.aside`
     display: none;
   }
 
-  @media screen and (${device.tablet}){
-    grid-column: span 2;
-  }
-
   @media screen and (${device.desktop}){
+    grid-column: 1 / 2;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-column: span 2;
+
     max-width: 100%;
     gap: 30px;
 
@@ -136,7 +133,7 @@ export const Aside = styled.aside`
     }
 
     & .bar--open {
-      width: 10px;
+      width: 30px;
       
 
       & > * {

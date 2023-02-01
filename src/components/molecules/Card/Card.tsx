@@ -1,29 +1,28 @@
 import React from 'react'
-import { CardStyled, Body, Footer, Content } from './Card.styled'
-import user from '@/assets/user.png'
+import { CardStyled, Body, Footer, Content, Aside, Title } from './Card.styled'
 import { Avatar } from '@/components'
 
 
 interface Props {
   aside?: JSX.Element | JSX.Element[]
-  data: {photo: string, name: string, message: string}
+  data: {photo?: string, name?: string, message?: string}
   footer?: JSX.Element | JSX.Element[]
 }
 function Card({data, aside, footer}: Props) {
-  const photo = data?.photo? data : user
+
   return (
     <CardStyled>
       <Body>
-        <Avatar src={photo} alt='imagen de usuario' />
+        <Avatar src={data?.photo} alt='imagen de usuario' />
         <Content>
-          {data?.name && <h1>{data?.name}</h1>}
+          {data?.name && <Title>{data?.name}</Title>}
           { data?.message && 
               <p className='card__paragraph'>
                 { data.message }
               </p>
             }
           </Content>
-          { aside }
+          {aside && <Aside>{ aside }</Aside> }
       </Body>
       { footer && <Footer> { footer } </Footer>}
     </CardStyled>

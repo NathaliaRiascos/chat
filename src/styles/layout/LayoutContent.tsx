@@ -9,8 +9,8 @@ export const LayoutContent = styled.div`
   padding-top: 34px;
   grid-column: 1 / 2;
   overflow-y: auto;
-  max-width: 430px;
-
+  // max-width: 430px;
+  max-width: 410px;
  
   & header {
     display: flex;
@@ -51,11 +51,15 @@ export const LayoutContent = styled.div`
 
   // @media screen and (${device.tablet}){
   //   padding: 30px;
-  // }
-  @media screen and (${device.desktop}){
+    // max-width: 400px;
+    width: 100%;
+    grid-column: 2 / 3;
+
+    max-width: 350px;
+
   padding-right: 30px;
    margin: 0;
-   grid-column: 2 / 3;
+   
 
    & header {
     max-width: 400px;

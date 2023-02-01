@@ -1,16 +1,23 @@
 :root {
   --font-weight-regular: 400;
 
-   /*colors*/
+   /* colors */
   --primary: #5d8cd1;
   --blue-dark: #1E90FF;
   --white: #FFF;
   --dark-white: #f3f5f9;
   --background: ;
   --grey: #646368;
-  --light-grey: #E5E5E5;
+  --light-grey: #f6f9fb;
   --medium-grey: #BDBDBD;
 
+  /* Font Size */
+  --text-xs:  0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.375rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2lg: 2rem;
 }
 
 * {
